@@ -3,110 +3,138 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-primary: 16 91 216;
-    --color-primary-darker: 11 61 145;
-    --color-primary-darkest: 6 31 74;
-    --color-base: 33 33 33;
-    --color-gray-dark: 50 58 69;
-    --color-gray-light: 174 176 181;
-    --color-white: 255 255 255;
-    --color-black: 0 0 0;
-  }
+    :root {
+        --color-primary: rgb(16, 91, 216);
+        --color-primary-darker: rgb(11, 61, 145);
+        --color-primary-darkest: rgb(6, 31, 74);
+        --color-base: rgb(33, 33, 33);
+        --color-gray-dark: rgb(50, 58, 69);
+        --color-gray-light: rgb(174, 176, 181);
+        --color-white: rgb(255, 255, 255);
+        --color-black: rgb(0, 0, 0);
+        --color-primary-black: rgb(27, 27, 27);
+        --color-gray-lightest: rgb(241, 241, 241);
+    }
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87);
+    color-scheme: light dark;
+    /* color: rgba(255, 255, 255, 0.87);
   background-color: #242424; */
 
-  background: #fff;
+    background: #fff;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: var(--color-white);
-  text-decoration: inherit;
-  font-weight: bold;
+    font-weight: 500;
+    color: var(--color-white);
+    text-decoration: inherit;
 }
 
 a:hover {
-  border-bottom: dashed 1px #fff;
+    border-bottom: dashed 1px #fff;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Inter", sans-serif;
-font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
 }
 
 p {
-  font-family: "Public sans", sans-serif;
+    font-family: "Public sans", sans-serif;
 }
 
 span {
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: "Public sans", sans-serif;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.btn {
+    background: var(--color-white);
+    border: solid #1b1b1b 4px;
+    border-radius: 0.8em;
+    padding: 1em 4em;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
-button:hover {
-  border-color: #646cff;
+.btn:hover {
+    background-color: var(--color-gray-lightest);
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Button with border only in buttom */
+
+.btn-b-outline {
+    position: relative; /* Adicionado para o ::before funcionar corretamente */
+    border: none;
+    padding: 0.3em 0;
+    transition: 100ms;
+    font-weight: bold;
+    background: transparent;
 }
+
+.btn-b-outline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--color-primary-black);
+    transition: width 0.3s ease;
+}
+
+.btn-b-outline-active::before {
+    width: 100%; /* Expande a borda no estado ativo */
+}
+
+.btn-b-outline:hover {
+    background: transparent;
+}
+
+.btn-b-outline+.btn-b-outline {
+    margin-left: 3em;
+}
+
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
 
-  a:hover {
-    color: #747bff;
-  }
+    a:hover {
+        color: #747bff;
+    }
 
-  button {
-    background-color: #f9f9f9;
-  }
+    button {
+        background-color: #f9f9f9;
+    }
 }
 
 .active {
-  border-bottom: dashed 1px #fff;
+    border-bottom: dashed 1px #fff;
 }

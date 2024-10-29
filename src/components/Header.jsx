@@ -26,7 +26,7 @@ export const Header = () => {
         >
           Picture Of The Day
         </NavLink>
-        <NavLink
+         <NavLink
           to="/your-day-picture"
           className={({ isActive, isPeding }) =>
             isPeding ? "pending" : isActive ? "active" : ""
@@ -34,7 +34,7 @@ export const Header = () => {
         >
           Your Day Picture
         </NavLink>
-      </nav>
+     </nav>
     </div>
   );
 };
