@@ -1,0 +1,14 @@
+{
+  "about": "Sobre",
+  "about-subtitle": "Busque conhecimento",
+  "about-description": {
+    "part1": "Este site foi desenvolvido como parte de um projeto para estudar e demonstrar a utilização de APIs, utilizando as APIs públicas da NASA. O objetivo é explorar como essas interfaces podem ser integradas para fornecer dados sobre o espaço, imagens astronômicas e eventos científicos de forma acessível.",
+    "part2": "Este projeto busca, além de oferecer conteúdo interessante, aprimorar o conhecimento sobre a implementação de APIs em ambientes web."
+  },
+  "technologies": "Tecnologias",
+  "technologies-subtitle": "Inovação????",
+  "technologies-decription": "As tecnologias usadas para desenvolver essa aplicação foram:",
+  "contacts": "Contatos",
+  "contacts-subtitle": "Olá, eu sou a Leonarda Saad :)",
+  "contacts-description": "Esse projeto foi feito para demonstrar e aprimorar minhas habilidades no desenvolvimento web, utilizando de tecnologias atuais para ....."
+}

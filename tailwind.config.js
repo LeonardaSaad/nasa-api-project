@@ -8,9 +8,9 @@ export default {
   ],
   theme: {
     extend: {},
-    fontFamily: {
-      inter: ["Inter", "sans-serief"],
-    },
+    // fontFamily: {
+    //   inter: ["Inter", "serif"],
+    // },
     colors: {
       primary: "var(--color-primary)",
       primaryDarker: "var(--color-primary-darker)",
@@ -19,7 +19,11 @@ export default {
       white: "var(--color-white)",
       black: "var(--color-black)",
       primaryBlack: "var(--color-primary-black)",
-      grayLightest: "var(--color-gray-lightest)"
+      grayLightest: "var(--color-gray-lightest)",
+      grayLight: "var(--color-gray-light)",
+      grayDark: "var(--color-gray-dark)",
+      grayDarkest: "var(--color-gray-darkest)",
+      gray: "var(--color-gray)",
     },
   },
   plugins: [],

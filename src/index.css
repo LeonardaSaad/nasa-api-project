@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @layer base {
     :root {
         --color-primary: rgb(16, 91, 216);
@@ -9,22 +13,22 @@
         --color-primary-darkest: rgb(6, 31, 74);
         --color-base: rgb(33, 33, 33);
         --color-gray-dark: rgb(50, 58, 69);
+        --color-gray: rgb(185, 185, 187);
         --color-gray-light: rgb(174, 176, 181);
         --color-white: rgb(255, 255, 255);
         --color-black: rgb(0, 0, 0);
         --color-primary-black: rgb(27, 27, 27);
-        --color-gray-lightest: rgb(241, 241, 241);
+        --color-gray-lightest: rgb(214, 215, 217);
+        --color-gray-darkest: rgb(27, 27, 27);
     }
 }
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
     line-height: 1.5;
     font-weight: 400;
 
     color-scheme: light dark;
-    /* color: rgba(255, 255, 255, 0.87);
-  background-color: #242424; */
 
     background: #fff;
 
@@ -34,14 +38,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-    font-weight: 500;
-    color: var(--color-white);
-    text-decoration: inherit;
-}
-
-a:hover {
-    border-bottom: dashed 1px #fff;
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -52,24 +52,94 @@ body {
 }
 
 h1 {
-    font-size: 3.2em;
+    font-size: 3rem;
     line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.2rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+a,
+button {
     font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-weight: bold;
+}
+
+h4 {
+    font-size: 0.9rem;
 }
 
 p {
-    font-family: "Public sans", sans-serif;
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
 }
 
 span {
-    font-family: "Inter", sans-serif;
     font-weight: bold;
+}
+
+a {
+    font-weight: 500;
+    color: var(--color-white);
+    text-decoration: inherit;
+    font-size: 0.9rem;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 3%;
+}
+
+a:hover {
+    border-bottom: dashed 1px #fff;
+}
+
+.footer-logo-name {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+
+    @media (min-width: 640px) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 1280px) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 1536px) {
+        font-size: 2rem;
+    }
+}
+
+.footer-nav-link {
+    border: none;
+    padding: 0;
+    color: var(--color-gray);
+}
+
+/* BUTTON */
+button {
+    min-height: 40px;
+    min-width: 40px;
 }
 
 .btn {
@@ -85,10 +155,26 @@ span {
     background-color: var(--color-gray-lightest);
 }
 
-/* Button with border only in buttom */
+/* Button with outline border */
+.btn-outline {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Button with border only in buttom */
 .btn-b-outline {
-    position: relative; /* Adicionado para o ::before funcionar corretamente */
+    position: relative;
+    /* Adicionado para o ::before funcionar corretamente */
     border: none;
     padding: 0.3em 0;
     transition: 100ms;
@@ -108,17 +194,33 @@ span {
 }
 
 .btn-b-outline-active::before {
-    width: 100%; /* Expande a borda no estado ativo */
+    width: 100%;
+    /* Expande a borda no estado ativo */
 }
 
 .btn-b-outline:hover {
     background: transparent;
 }
 
-.btn-b-outline+.btn-b-outline {
-    margin-left: 3em;
+.btn-circle {
+    background: var(--color-gray-darkest);
+    border-radius: 100%;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
+.btn-black {
+    background: #000;
+    border-radius: 0.5rem;
+    color: white;
+}
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -137,4 +239,88 @@ span {
 
 .active {
     border-bottom: dashed 1px #fff;
+}
+
+.component-padding {
+    padding: 0.5rem 1.5rem;
+
+    @media (min-width: 480px) {
+        padding: 0.5rem 5rem;
+    }
+
+    @media (min-width: 640px) {
+        padding: 0.5rem 8rem;
+    }
+
+    @media (min-width: 768px) {
+        padding: 0.5rem 10rem;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 0.5rem 20rem;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 0.5rem 25rem;
+    }
+
+    @media (min-width: 1536px) {
+        padding: 0.5rem 35rem;
+    }
+}
+
+.component-padding-footer {
+    padding: 1.5rem 1.5rem;
+
+    @media (min-width: 480px) {
+        padding: 1.5rem 5rem;
+    }
+
+    @media (min-width: 640px) {
+        padding: 1.5rem 8rem;
+    }
+
+    @media (min-width: 768px) {
+        padding: 1.5rem 12rem;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 1.5rem 20rem;
+    }
+
+    @media (min-width: 1280px) {
+        padding: 1.5rem 25rem;
+    }
+
+    @media (min-width: 1536px) {
+        padding: 1.5rem 35rem;
+    }
+}
+
+.component-margin {
+    margin: 5rem 1.5rem;
+
+    @media (min-width: 480px) {
+        margin: 5rem 5rem;
+    }
+
+    @media (min-width: 640px) {
+        margin: 5rem 8rem;
+    }
+
+    @media (min-width: 768px) {
+        margin: 5rem 12rem;
+    }
+
+    @media (min-width: 1024px) {
+        margin: 5rem 20rem;
+    }
+
+    @media (min-width: 1280px) {
+        margin: 5rem 25rem;
+    }
+
+    @media (min-width: 1536px) {
+        margin: 5rem 35rem;
+    }
 }

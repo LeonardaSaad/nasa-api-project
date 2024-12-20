@@ -1,0 +1,21 @@
+{
+  "icon_navigation": {
+    "alt_text": "Navigation menu"
+  },
+  "logo": {
+    "alt_text": "NASA logo"
+  },
+  "flags": {
+    "usa": "United State of America flag",
+    "br": "Brazil flag"
+  },
+  "navigation": {
+    "home": "Home",
+    "daily_space_view": "Daily Space View",
+    "space_on_your_day": "Space on Your Day"
+  },
+  "banner": {
+    "title": "Welcome",
+    "alt_img": "Image of space with the earth and a satellite background."
+  }
+}
