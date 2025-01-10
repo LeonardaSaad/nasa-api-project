@@ -10,6 +10,10 @@ const useFetchAPI = (url) => {
     if (!url) return;
 
     const fetchData = async () => {
+      /** Try to get the response from API 
+       *    if not, set an error and change the loading status
+       *    if ok, set data and change the loading status. */ 
+     
       try {
         const response = await axios.get(url);
         setData(response.data);
@@ -20,6 +24,7 @@ const useFetchAPI = (url) => {
       }
     };
 
+    // Call the function
     fetchData();
   }, [url]);
 

@@ -6,17 +6,21 @@ import Banner from "../components/Banner.jsx";
 import Footer from "../components/Footer.jsx";
 import "../index.css";
 
+/* Components */
+import Button from "../components/Button.jsx";
+
 /* IMAGES */
-import react from "../img/React-svg.svg";
-import vite from "../img/vite svg.svg";
-import tailwind from "../img/tailwind svg.svg";
-import axios from "../img/axios svg.svg";
-import github from "../img/github-svg.svg";
-import linkedin from "../img/linkedin-svg.svg";
-import mail from "../img/mail-svg.svg";
+import react from "../img/React.svg";
+import vite from "../img/vite.svg";
+import tailwind from "../img/tailwind.svg";
+import axios from "../img/axios.svg";
+import github from "../img/github.svg";
+import linkedin from "../img/linkedin.svg";
+import mail from "../img/mail.svg";
+import linkArrow from "../img/link arrow.svg";
 
 function Home() {
-  const { t } = useTranslation('home');
+  const { t } = useTranslation("home");
 
   const [topic, setTopic] = useState("about");
 
@@ -24,41 +28,35 @@ function Home() {
     <div className="flex start flex-col h-full">
       <Header />
       <Banner />
-      <div className="flex-1 text-black component-margin">
+      <div className="flex-1 text-clB0 component-margin z-0">
         <div className="mb-14">
-          
-          <div className=" flex flex-wrap items-start pb-3 gap-4 sm:items-center sm:gap-6">
-            <button
-              className={
-                topic == "about"
-                  ? "btn-b-outline btn-b-outline-active"
-                  : "btn-b-outline"
-              }
+          {/* TODO: ???? */}
+          <ul className="flex flex-wrap items-start pb-3 gap-4 sm:items-center sm:gap-6">
+            <li
+              className={`topic-li ${
+                topic === "about" ? "topic-li-active" : ""
+              }`}
               onClick={() => setTopic("about")}
             >
               {t("about")}
-            </button>
-            <button
-              className={
-                topic == "technologies"
-                  ? "btn-b-outline btn-b-outline-active"
-                  : "btn-b-outline"
-              }
+            </li>
+            <li
+              className={`topic-li ${
+                topic === "technologies" ? "topic-li-active" : ""
+              }`}
               onClick={() => setTopic("technologies")}
             >
               {t("technologies")}
-            </button>
-            <button
-              className={
-                topic == "contacts"
-                  ? "btn-b-outline btn-b-outline-active"
-                  : "btn-b-outline"
-              }
-              onClick={() => setTopic("contacts")}
+            </li>
+            <li
+              className={`topic-li ${
+                topic === "creator" ? "topic-li-active" : ""
+              }`}
+              onClick={() => setTopic("creator")}
             >
-              {t("contacts")}
-            </button>
-          </div>
+              {t("creator")}
+            </li>
+          </ul>
           <div className="h-px bg-grayLightest"></div>
         </div>
         <div>
@@ -66,60 +64,124 @@ function Home() {
             {topic == "about"
               ? t("about")
               : topic == "technologies"
-                ? t("technologies")
-                : t("contacts")}
+              ? t("technologies")
+              : t("creator")}
           </h2>
           <p className="font-bold mb-4">
             {topic == "about"
               ? t("about-subtitle")
               : topic == "technologies"
-                ? t("technologies-subtitle")
-                : t("contacts-subtitle")}
+              ? t("technologies-subtitle")
+              : t("creator-subtitle")}
           </p>
           {topic == "about" ? (
             <div>
               <p>{t("about-description.part1")} </p>
               <br />
               <p>{t("about-description.part2")} </p>
+              <br />
+              <p>{t("about-description.part3")}</p>
+              <br />
+              <div className="flex flex-col items-start">
+                <a
+                  className="inline-flex"
+                  href="https://github.com/LeonardaSaad/project-nasa-api"
+                >
+                  <span className="text-clB0 font-bold mr-3">GitHub</span>
+                  <img
+                    className="size-5 -rotate-45"
+                    src={linkArrow}
+                    alt="Arrow into a orange circle"
+                  />
+                </a>
+                <a
+                  className="inline-flex"
+                  href="https://www.figma.com/design/ufIAA3A3F3ApYpAd0BFq73/Nasa-Api-Project?node-id=1-2&t=qoC30mC6noPx77wH-1"
+                >
+                  <span className="text-clB0 font-bold mr-3">Figma</span>
+                  <img
+                    className="size-5 -rotate-45"
+                    src={linkArrow}
+                    alt="Arrow into a orange circle"
+                  />
+                </a>
+              </div>
             </div>
           ) : topic == "technologies" ? (
+            // *TODO - Get a better style for this
             <div>
               <p className="mb-10">{t("technologies-description")}</p>
               <div className="flex gap-4 flex-wrap">
-                <button className="btn-outline">
-                  <img src={react} alt="React icon" />
-                  React
-                </button>
-                <button className="btn-outline">
-                  <img src={vite} alt="Vite icon" />
-                  Vite
-                </button>
-                <button className="btn-outline">
-                  <img src={tailwind} alt="Tailwind icon" />
-                  Tailwind
-                </button>
-                <button className="btn-outline ">
-                  <img src={axios} alt="Axios icon" />
-                  Axios
-                </button>
+                <Button
+                  type="rectangle-without-link"
+                  img={react}
+                  imgAlt="React icon"
+                  content="React"
+                />
+                <Button
+                  type="rectangle-without-link"
+                  img={vite}
+                  imgAlt="Vite icon"
+                  content="Vite"
+                />
+                <Button
+                  type="rectangle-without-link"
+                  img={tailwind}
+                  imgAlt="Tailwind icon"
+                  content="Tailwind"
+                />
+                <Button
+                  type="rectangle-without-link"
+                  img={axios}
+                  imgAlt="Axios icon"
+                  content="Axios"
+                />
               </div>
             </div>
           ) : (
-            <div>
-              <p className="mb-10">{t("contacts-description")} </p>
-              <div className="flex gap-4 flex-wrap">
-                <button className="btn-outline">
-                  <img src={github} alt="Github icon" />
-                  Github
-                </button>
-                <button className="btn-outline">
-                  <img src={linkedin} alt="LinkedIn icon" />
-                  LinkedIn
-                </button>
-                <button className="btn-outline">
-                  <img src={mail} alt="Email icon" />
-                  Email
-                </button>
+            // Leonarda Saad contacts
+            // *TODO - Discover how to create a alt to the button
+            // *TODO - Melhorar o visual disso
+            <div className="flex flex-col gap-10">
+
+                <p>{t("creator-description")}</p>
+
+              <div className="flex gap-10 flex-wrap">
+                <a href="https://github.com/LeonardaSaad/project-nasa-api">
+                  <img
+                    className="size-6 mr-0.5"
+                    src={github}
+                    alt="GitHub logo"
+                  />
+                  <span className="text-clB0 font-bold mr-3">GitHub</span>
+                  <img
+                    className="size-5 -rotate-45"
+                    src={linkArrow}
+                    alt="Arrow into a orange circle"
+                  />
+                </a>
+                <a href="https://github.com/LeonardaSaad/project-nasa-api">
+                  <img
+                    className="size-6 mr-0.5"
+                    src={linkedin}
+                    alt="LinkedIn logo"
+                  />
+                  <span className="text-clB0 font-bold mr-3">LinkedIn</span>
+                  <img
+                    className="size-5 -rotate-45"
+                    src={linkArrow}
+                    alt="Arrow into a orange circle"
+                  />
+                </a>
+                <a href="https://github.com/LeonardaSaad/project-nasa-api">
+                  <img className="size-6 mr-0.5" src={mail} alt="Mail icon" />
+                  <span className="text-clB0 font-bold mr-3">Email</span>
+                  <img
+                    className="size-5 -rotate-45"
+                    src={linkArrow}
+                    alt="Arrow into a orange circle"
+                  />
+                </a>
               </div>
             </div>
           )}

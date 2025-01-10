@@ -9,25 +9,25 @@ const DailySpaceView = () => {
   const env = import.meta.env;
   const url = `${env.VITE_API_URL_APOD}?api_key=${env.VITE_API_KEY}`;
   const { data, error, loading } = useFetchAPI(url);
-  console.log(data);
+
   return (
     <div className="h-full">
       <Header />
       <div className="flex-1 component-margin flex flex-col gap-16">
-        <h2 className="text-black">Daily Space View</h2>
+        <h2 className="text-clB0">Daily Space View</h2>
         {loading ? (
           <div>Loading...</div>
         ) : error ? (
-          <div>Error: {error.menssage}</div>
+          <div>Error: {error.message}</div>
         ) : (
-          <div className="text-black flex flex-col gap-8">
-            {/* Image */}
+          <div className="text-clB0 flex flex-col gap-8">
+            {/* Day image by API. */}
             <img src={data.url} alt={data.title} />
-            {/* Description */}
+            {/* Image description */}
             <div className="text-justify flex flex-col gap-8">
-              {/* Title */}
+              {/* Image title */}
               <h4 className="text-xl text-center">{data.title}</h4>
-              {/* Explanation */}
+              {/* Image explanation */}
               <p>{data.explanation}</p>
             </div>
           </div>

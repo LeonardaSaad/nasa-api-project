@@ -7,57 +7,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 @layer base {
-    :root {
-        --color-primary: rgb(16, 91, 216);
-        --color-primary-darker: rgb(11, 61, 145);
-        --color-primary-darkest: rgb(6, 31, 74);
-        --color-base: rgb(33, 33, 33);
-        --color-gray-dark: rgb(50, 58, 69);
-        --color-gray: rgb(185, 185, 187);
-        --color-gray-light: rgb(174, 176, 181);
-        --color-white: rgb(255, 255, 255);
-        --color-black: rgb(0, 0, 0);
-        --color-primary-black: rgb(27, 27, 27);
-        --color-gray-lightest: rgb(214, 215, 217);
-        --color-gray-darkest: rgb(27, 27, 27);
-    }
+  :root {
+    --cl-primary: rgb(16, 91, 216);
+    --cl-primary-darker: rgb(11, 61, 145);
+    --cl-primary-darkest: rgb(6, 31, 74);
+    --cl-base: rgb(33, 33, 33);
+    --cl-gray-dark: rgb(50, 58, 69);
+    --cl-gray-light: rgb(174, 176, 181);
+
+    --cl-gray: rgb(185, 185, 187);
+    --cl-gray-lightest: rgb(214, 215, 217);
+    --cl-gray-darkest: rgb(27, 27, 27);
+
+    --cl-primary-b: rgb(27, 27, 27);
+
+    --b0: rgb(0, 0, 0);
+    --w0: rgb(255, 255, 255);
+  }
 }
 
 :root {
-    /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-    line-height: 1.5;
-    font-weight: 400;
+  line-height: 1.5;
+  font-weight: 400;
 
-    color-scheme: light dark;
+  color-scheme: light dark;
 
-    background: #fff;
+  background: #fff;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    min-width: 320px;
-    min-height: 100vh;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1 {
-    font-size: 3rem;
-    line-height: 1.1;
+  font-size: 3rem;
+  line-height: 1.1;
 }
 
 h2 {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
 }
 
 h1,
@@ -66,261 +67,214 @@ h3,
 h4,
 a,
 button {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: bold;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
 }
 
 h4 {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 p {
-    font-family: "Public Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 1rem;
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 span {
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 a {
-    font-weight: 500;
-    color: var(--color-white);
-    text-decoration: inherit;
-    font-size: 0.9rem;
-    min-width: 40px;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 3%;
+  font-weight: 500;
+  color: var(--w0);
+  text-decoration: inherit;
+  font-size: 0.9rem;
+  min-width: 40px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 a:hover {
-    border-bottom: dashed 1px #fff;
+  border-bottom: dashed 1px #fff;
 }
 
 .footer-logo-name {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+
+  @media (min-width: 640px) {
     font-size: 2rem;
+  }
 
-    @media (min-width: 640px) {
-        font-size: 2rem;
-    }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 
-    @media (min-width: 768px) {
-        font-size: 2rem;
-    }
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 
-    @media (min-width: 1024px) {
-        font-size: 2rem;
-    }
+  @media (min-width: 1280px) {
+    font-size: 2rem;
+  }
 
-    @media (min-width: 1280px) {
-        font-size: 2rem;
-    }
-
-    @media (min-width: 1536px) {
-        font-size: 2rem;
-    }
+  @media (min-width: 1536px) {
+    font-size: 2rem;
+  }
 }
 
 .footer-nav-link {
-    border: none;
-    padding: 0;
-    color: var(--color-gray);
-}
-
-/* BUTTON */
-button {
-    min-height: 40px;
-    min-width: 40px;
-}
-
-.btn {
-    background: var(--color-white);
-    border: solid #1b1b1b 4px;
-    border-radius: 0.8em;
-    padding: 1em 4em;
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: var(--color-gray-lightest);
-}
-
-/* Button with outline border */
-.btn-outline {
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 0.5rem 2rem;
-    font-weight: bold;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-
-    img {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
-
-/* Button with border only in buttom */
-.btn-b-outline {
-    position: relative;
-    /* Adicionado para o ::before funcionar corretamente */
-    border: none;
-    padding: 0.3em 0;
-    transition: 100ms;
-    font-weight: bold;
-    background: transparent;
-}
-
-.btn-b-outline::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0;
-    background-color: var(--color-primary-black);
-    transition: width 0.3s ease;
-}
-
-.btn-b-outline-active::before {
-    width: 100%;
-    /* Expande a borda no estado ativo */
-}
-
-.btn-b-outline:hover {
-    background: transparent;
-}
-
-.btn-circle {
-    background: var(--color-gray-darkest);
-    border-radius: 100%;
-    padding: 0.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    svg {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
-
-.btn-black {
-    background: #000;
-    border-radius: 0.5rem;
-    color: white;
+  border: none;
+  padding: 0;
+  color: var(--cl-gray);
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
 
-    a:hover {
-        color: #747bff;
-    }
+  a:hover {
+    color: #747bff;
+  }
 
-    button {
-        background-color: #f9f9f9;
-    }
+  button {
+    background-color: #f9f9f9;
+  }
 }
 
 .active {
-    border-bottom: dashed 1px #fff;
+  border-bottom: dashed 1px #fff;
 }
 
 .component-padding {
-    padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 
-    @media (min-width: 480px) {
-        padding: 0.5rem 5rem;
-    }
+  @media (min-width: 480px) {
+    padding: 0.5rem 5rem;
+  }
 
-    @media (min-width: 640px) {
-        padding: 0.5rem 8rem;
-    }
+  @media (min-width: 640px) {
+    padding: 0.5rem 8rem;
+  }
 
-    @media (min-width: 768px) {
-        padding: 0.5rem 10rem;
-    }
+  @media (min-width: 768px) {
+    padding: 0.5rem 10rem;
+  }
 
-    @media (min-width: 1024px) {
-        padding: 0.5rem 20rem;
-    }
+  @media (min-width: 1024px) {
+    padding: 0.5rem 20rem;
+  }
 
-    @media (min-width: 1280px) {
-        padding: 0.5rem 25rem;
-    }
+  @media (min-width: 1280px) {
+    padding: 0.5rem 25rem;
+  }
 
-    @media (min-width: 1536px) {
-        padding: 0.5rem 35rem;
-    }
-}
-
-.component-padding-footer {
-    padding: 1.5rem 1.5rem;
-
-    @media (min-width: 480px) {
-        padding: 1.5rem 5rem;
-    }
-
-    @media (min-width: 640px) {
-        padding: 1.5rem 8rem;
-    }
-
-    @media (min-width: 768px) {
-        padding: 1.5rem 12rem;
-    }
-
-    @media (min-width: 1024px) {
-        padding: 1.5rem 20rem;
-    }
-
-    @media (min-width: 1280px) {
-        padding: 1.5rem 25rem;
-    }
-
-    @media (min-width: 1536px) {
-        padding: 1.5rem 35rem;
-    }
+  @media (min-width: 1536px) {
+    padding: 0.5rem 35rem;
+  }
 }
 
 .component-margin {
-    margin: 5rem 1.5rem;
+  margin: 5rem 1.5rem;
 
-    @media (min-width: 480px) {
-        margin: 5rem 5rem;
-    }
+  @media (min-width: 480px) {
+    margin: 5rem 5rem;
+  }
 
-    @media (min-width: 640px) {
-        margin: 5rem 8rem;
-    }
+  @media (min-width: 640px) {
+    margin: 5rem 8rem;
+  }
 
-    @media (min-width: 768px) {
-        margin: 5rem 12rem;
-    }
+  @media (min-width: 768px) {
+    margin: 5rem 12rem;
+  }
 
-    @media (min-width: 1024px) {
-        margin: 5rem 20rem;
-    }
+  @media (min-width: 1024px) {
+    margin: 5rem 20rem;
+  }
 
-    @media (min-width: 1280px) {
-        margin: 5rem 25rem;
-    }
+  @media (min-width: 1280px) {
+    margin: 5rem 25rem;
+  }
 
-    @media (min-width: 1536px) {
-        margin: 5rem 35rem;
-    }
+  @media (min-width: 1536px) {
+    margin: 5rem 35rem;
+  }
+}
+
+.component-padding-footer {
+  padding: 1.5rem 1.5rem;
+
+  @media (min-width: 480px) {
+    padding: 1.5rem 5rem;
+  }
+
+  @media (min-width: 640px) {
+    padding: 1.5rem 8rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 12rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 1.5rem 20rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 1.5rem 25rem;
+  }
+
+  @media (min-width: 1536px) {
+    padding: 1.5rem 35rem;
+  }
+}
+
+.mobile-nav {
+  top: 56px;
+}
+
+/* *TODO - Comment */
+.topic-li {
+  position: relative;
+  border: none;
+  padding: 0.3em 0;
+  transition: 100ms;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+}
+
+.topic-li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--cl-primary-b);
+  transition: width 0.3s ease;
+}
+
+/* Expande a borda no estado ativo */
+.topic-li-active::before {
+  width: 100%;
+}
+
+.topic-li:hover {
+  background: transparent;
 }

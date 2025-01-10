@@ -14,17 +14,17 @@ const SpaceOnYourDay = () => {
     <div>
       <Header />
       <div className="flex-1 component-margin flex flex-col gap-16">
-        <h2 className="text-black">Space on Your Day</h2>
-
+        <h2 className="text-clB0">Space on Your Day</h2>
+        {/* Form to get the date */}
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <label htmlFor="fdate" className="text-black text-lg ">
+          <label htmlFor="form-date" className="text-clB0 text-lg ">
             Choose the data
           </label>
           <input
             type="date"
-            className="w-full min-h-10 px-4 text-lg text-black bg-white border-2 rounded-md"
-            id="fdate"
-            name="fdate"
+            className="w-full min-h-10 px-4 text-lg text-clB0 bg-clW0 border-2 rounded-md"
+            id="form-date"
+            name="form-date"
             onChange={(e) => setDateValue(e)}
           />
           <button type="submit" className="btn-black">

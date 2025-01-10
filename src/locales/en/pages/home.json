@@ -2,13 +2,15 @@
   "about": "About",
   "about-subtitle": "Seek knowledge",
   "about-description": {
-    "part1": "This site was developed as part of a project to study and demonstrate the use of APIs, using public APIs from NASA. The goal is to explore how these interfaces can be integrated to provide data about space, images astronomical and scientific events in an accessible form.",
-    "part2": "This project seeks, in addition to offering interesting content, improve knowledge about the implementation of APIs in web environments."
+    "part1": "This site was developed as part of a project to study and demonstrate the use of NASA’s public API. The objective is to explore how various technologies can be integrated to provide space data, images, and scientific events in an accessible way.",
+    "part2": "This project aims to put into practice and improve programming knowledge.",
+    "part3": "Important links:"
   },
   "technologies": "Technologies",
-  "technologies-subtitle": "Innovation????",
-  "technologies-description": "The technologies used to develop this application were:",
-  "contacts": "Contacts",
-  "contacts-subtitle": "Hello, I'm Leonarda Saad :)",
-  "contacts-description": "This project was made to demonstrate and improve my skills in web development, using current technologies for ....."
+  "technologies-subtitle": "Innovation",
+  "technologies-description": "The technologies selected to develop this application were:",
+  "creator": "Creator",
+  "creator-subtitle": "Hello, I'm Leonarda Saad :)",
+  "creator-description": "I am a student of the 6th term of Computer Science, focusing on front-end development. I have experience in React, JavaScript, CSS, HTML, and tools like Tailwind, Sass, Styled-components, and PostgreSQL."
+
 }

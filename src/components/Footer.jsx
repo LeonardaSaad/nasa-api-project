@@ -5,12 +5,14 @@ const Footer = () => {
   const { t } = useTranslation("footer");
 
   return (
-    <div className="bg-black text-gray w-screen component-padding-footer flex flex-col items-center gap-12 md:flex-row md:justify-between">
+    <div className="bg-clB0 text-gray w-screen component-padding-footer flex flex-col items-center gap-12 md:flex-row md:justify-between">
       <div className="flex gap-6 items-center justify-between md:justify-normal md:gap-4 ">
+        {/* Braille logo with name initials. */}
         <div className="flex items-center justify-center w-1/3">
           <img src={logoBraille} alt={t("logo.alt_img")} />
           <p className="footer-logo-name absolute">LS</p>
         </div>
+        {/* Navigation bar with the website pages */}
         <div className="flex flex-col gap-2">
           <a href="/" className="footer-nav-link">
             <h4>{t("navigation.home")}</h4>
@@ -24,6 +26,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center justify-between gap-10 md:flex-col md:items-start md:gap-3">
+        {/* NOTE: This code are outdated with the design */}
+        {/* TODO: redo all the section*/}
         <h4 className="text-bold">{t("contacts")}</h4>
         <div className="flex gap-2">
           <button className="btn-circle" alt="Github link">
