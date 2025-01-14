@@ -143,11 +143,14 @@ function Home() {
             // *TODO - Discover how to create a alt to the button
             // *TODO - Melhorar o visual disso
             <div className="flex flex-col gap-10">
-
-                <p>{t("creator-description")}</p>
+              <p>{t("creator-description")}</p>
 
               <div className="flex gap-10 flex-wrap">
-                <a href="https://github.com/LeonardaSaad/project-nasa-api">
+                <a
+                  className="hover:border-0"
+                  href="https://github.com/LeonardaSaad"
+                  target="_blank"
+                >
                   <img
                     className="size-6 mr-0.5"
                     src={github}
@@ -160,7 +163,11 @@ function Home() {
                     alt="Arrow into a orange circle"
                   />
                 </a>
-                <a href="https://github.com/LeonardaSaad/project-nasa-api">
+                <a
+                  className="hover:border-0"
+                  href="https://www.linkedin.com/in/leonarda-saad/"
+                  target="_blank"
+                >
                   <img
                     className="size-6 mr-0.5"
                     src={linkedin}
@@ -173,7 +180,11 @@ function Home() {
                     alt="Arrow into a orange circle"
                   />
                 </a>
-                <a href="https://github.com/LeonardaSaad/project-nasa-api">
+                <a
+                  className="hover:border-0"
+                  href="mailto:saad.leonarda@gmail.com"
+                  target="_blank"
+                >
                   <img className="size-6 mr-0.5" src={mail} alt="Mail icon" />
                   <span className="text-clB0 font-bold mr-3">Email</span>
                   <img
