@@ -26,9 +26,9 @@ export default {
       clW0: "var(--w0)",
     },
     fontFamily: {
-      'inter': ['Inter'],
-      'public': ['Public Sans']
-    }
+      inter: ['"Inter"', "sans-serif"],
+      public: ['"Public Sans"'],
+    },
   },
   plugins: [],
 };

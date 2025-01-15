@@ -12,7 +12,7 @@
     --cl-primary-darker: rgb(11, 61, 145);
     --cl-primary-darkest: rgb(6, 31, 74);
     --cl-base: rgb(33, 33, 33);
-    --cl-gray-dark: rgb(50, 58, 69);
+    --cl-gray-dark: rgb(46, 46, 50);
     --cl-gray-light: rgb(174, 176, 181);
 
     --cl-gray: rgb(185, 185, 187);
@@ -74,7 +74,7 @@ button {
 }
 
 h4 {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 p {
@@ -86,21 +86,21 @@ p {
 }
 
 span {
-  font-weight: bold;
   font-size: 1rem;
+  color: var(--w0);
 }
 
 a {
-  font-weight: 500;
+  font-weight: normal;
   color: var(--w0);
   text-decoration: inherit;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   min-width: 40px;
-  min-height: 38px;
+  min-height: 30px;
   padding: 0rem 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  display: inline-flex;
 }
 
 a:hover {
@@ -132,12 +132,6 @@ a:hover {
   @media (min-width: 1536px) {
     font-size: 2rem;
   }
-}
-
-.footer-nav-link {
-  border: none;
-  padding: 0;
-  color: var(--cl-gray);
 }
 
 @media (prefers-color-scheme: light) {
