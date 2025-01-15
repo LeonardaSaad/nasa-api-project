@@ -14,7 +14,7 @@ const Banner = () => {
         alt={t("banner.alt_img")}
       />
       {/* Banner welcome message */}
-      <span className="absolute text-5xl text-white component-padding">
+      <span className="absolute text-5xl text-white font-bold component-padding">
         {t("banner.title")}
       </span>
     </div>
