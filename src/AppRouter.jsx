@@ -30,7 +30,7 @@ const AppRouter = () => {
       },
     ],
     {
-      basename: "/nasa-api-project",
+      basename: import.meta.env.BASE_URL,
     }
   );
 
