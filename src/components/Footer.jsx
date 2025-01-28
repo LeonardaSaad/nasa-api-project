@@ -16,13 +16,13 @@ const Footer = () => {
 
         {/* Navigation bar with the website pages */}
         <div className="flex flex-col gap-2 text-nowrap">
-          <a href="/">
+          <a href="/nasa-api-project/">
             <span className="text-sm">{t("navigation.home")}</span>
           </a>
-          <a href="/daily-space-view">
+          <a href="/nasa-api-project/daily-space-view">
             <span className="text-sm">{t("navigation.daily_space_view")}</span>
           </a>
-          <a href="/space-on-your-day">
+          <a href="/nasa-api-project/space-on-your-day">
             <span className="text-sm">{t("navigation.space_on_your_day")}</span>
           </a>
         </div>
@@ -36,7 +36,7 @@ const Footer = () => {
           <h4 className="text-gray font-bold">{t("contacts")}</h4>
           <div className="flex gap-2">
             <a
-              href="https://github.com/LeonardaSaad/project-nasa-api"
+              href="https://github.com/LeonardaSaad/nasa-api-project"
               target="_blank"
               className="bg-grayDark min-h-2.5 min-w-2.5 rounded-full p-1"
             >
