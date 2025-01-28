@@ -14,23 +14,20 @@ const AppRouter = () => {
     i18n.changeLanguage(lang);
   };
 
-  const router = createBrowserRouter(
-    [
-      {
-        path: "/",
-        element: <Home changeLanguage={changeLanguage} />,
-      }, // Home page: About, Technologies, Creator
-      {
-        path: "/daily-space-view",
-        element: <DailySpaceView changeLanguage={changeLanguage} />,
-      }, // Page that return a photo taken today
-      {
-        path: "/space-on-your-day",
-        element: <SpaceOnYourDay changeLanguage={changeLanguage} />,
-      }, // Page that returns a photo with accordance with the past date
-    ],
-    { basename: " /nasa-api-project" }
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/nasa-api-project/",
+      element: <Home changeLanguage={changeLanguage} />,
+    }, // Home page: About, Technologies, Creator
+    {
+      path: "/nasa-api-project/daily-space-view",
+      element: <DailySpaceView changeLanguage={changeLanguage} />,
+    }, // Page that return a photo taken today
+    {
+      path: "/nasa-api-project/space-on-your-day",
+      element: <SpaceOnYourDay changeLanguage={changeLanguage} />,
+    }, // Page that returns a photo with accordance with the past date
+  ]);
 
   return <RouterProvider router={router} />;
 };
