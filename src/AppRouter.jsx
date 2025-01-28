@@ -17,15 +17,15 @@ const AppRouter = () => {
   const router = createBrowserRouter(
     [
       {
-        path: "/",
+        path: "",
         element: <Home changeLanguage={changeLanguage} />,
       },
       {
-        path: "/daily-space-view",
+        path: "daily-space-view",
         element: <DailySpaceView changeLanguage={changeLanguage} />,
       },
       {
-        path: "/space-on-your-day",
+        path: "space-on-your-day",
         element: <SpaceOnYourDay changeLanguage={changeLanguage} />,
       },
     ],
