@@ -80,7 +80,7 @@ const Header = () => {
 
         {/* ANCHOR Nasa logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <a href="/nasa-api-project/" className="hover:border-0">
+          <a href="/" className="hover:border-0">
             <img src={Logo} alt={t("logo.alt_text")} className="size-11" />
           </a>
         </div>
@@ -115,7 +115,7 @@ const Header = () => {
           className={`flex flex-col gap-4 py-2 px-4 bg-clB0 component-padding items-start`}
         >
           <NavLink
-            to="/nasa-api-project/"
+            to="/"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
@@ -123,7 +123,7 @@ const Header = () => {
             {t("navigation.home")}
           </NavLink>
           <NavLink
-            to="/nasa-api-project/daily-space-view"
+            to="/daily-space-view"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
@@ -131,7 +131,7 @@ const Header = () => {
             {t("navigation.daily_space_view")}
           </NavLink>
           <NavLink
-            to="/nasa-api-project/space-on-your-day"
+            to="/space-on-your-day"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
