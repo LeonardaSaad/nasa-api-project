@@ -16,15 +16,15 @@ const AppRouter = () => {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/nasa-api-project/",
       element: <Home changeLanguage={changeLanguage} />,
     }, // Home page: About, Technologies, Creator
     {
-      path: "/daily-space-view",
+      path: "/nasa-api-project/daily-space-view",
       element: <DailySpaceView changeLanguage={changeLanguage} />,
     }, // Page that return a photo taken today
     {
-      path: "/space-on-your-day",
+      path: "/nasa-api-project/space-on-your-day",
       element: <SpaceOnYourDay changeLanguage={changeLanguage} />,
     }, // Page that returns a photo with accordance with the past date
   ]);
