@@ -80,7 +80,7 @@ const Header = () => {
 
         {/* ANCHOR Nasa logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <a href="/" className="hover:border-0">
+          <a href="/nasa-api-project/" className="hover:border-0">
             <img src={Logo} alt={t("logo.alt_text")} className="size-11" />
           </a>
         </div>
