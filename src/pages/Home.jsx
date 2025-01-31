@@ -25,13 +25,12 @@ function Home() {
   const [topic, setTopic] = useState("about");
 
   return (
-    <div className="flex start flex-col h-full">
+    <div className="flex start flex-col w-screen h-full">
       <Header />
       <Banner />
       <div className="flex-1 text-clB0 component-margin z-0">
         <div className="mb-14">
-          {/* TODO: ???? */}
-          <ul className="flex flex-wrap items-start pb-3 gap-4 sm:items-center sm:gap-6">
+          <ul className="flex pb-3 gap-4 sm:gap-6">
             <li
               className={`topic-li ${
                 topic === "about" ? "topic-li-active" : ""
@@ -84,8 +83,9 @@ function Home() {
               <br />
               <div className="flex flex-col items-start">
                 <a
-                  className="inline-flex"
+                  className="min-h-10 hover:border-0"
                   href="https://github.com/LeonardaSaad/project-nasa-api"
+                  target="_blank"
                 >
                   <span className="text-clB0 font-bold mr-3">GitHub</span>
                   <img
@@ -95,8 +95,9 @@ function Home() {
                   />
                 </a>
                 <a
-                  className="inline-flex"
+                  className="min-h-10 hover:border-0"
                   href="https://www.figma.com/design/ufIAA3A3F3ApYpAd0BFq73/Nasa-Api-Project?node-id=1-2&t=qoC30mC6noPx77wH-1"
+                  target="_blank"
                 >
                   <span className="text-clB0 font-bold mr-3">Figma</span>
                   <img
@@ -108,40 +109,28 @@ function Home() {
               </div>
             </div>
           ) : topic == "technologies" ? (
-            // *TODO - Get a better style for this
-            <div>
-              <p className="mb-10">{t("technologies-description")}</p>
-              <div className="flex gap-4 flex-wrap">
-                <Button
-                  type="rectangle-without-link"
-                  img={react}
-                  imgAlt="React icon"
-                  content="React"
-                />
-                <Button
-                  type="rectangle-without-link"
-                  img={vite}
-                  imgAlt="Vite icon"
-                  content="Vite"
-                />
-                <Button
-                  type="rectangle-without-link"
-                  img={tailwind}
-                  imgAlt="Tailwind icon"
-                  content="Tailwind"
-                />
-                <Button
-                  type="rectangle-without-link"
-                  img={axios}
-                  imgAlt="Axios icon"
-                  content="Axios"
-                />
+            <div className="flex flex-col gap-10">
+              <p>{t("technologies-description")}</p>
+              <div className="flex gap-4 flex-wrap font-inter">
+                <div className="flex items-center gap-2 py-2 px-10 border-2 border-primaryBlack">
+                  <img className="w-6" src={react} alt="React icon" />
+                  <span className="text-clB0">React</span>
+                </div>
+                <div className="flex items-center gap-2 py-2 px-10 border-2 border-primaryBlack">
+                  <img className="w-6" src={vite} alt="Vite icon" />
+                  <span className="text-clB0">Vite</span>
+                </div>
+                <div className="flex items-center gap-2 py-2 px-10 border-2 border-primaryBlack">
+                  <img className="w-6" src={tailwind} alt="TailwindCSS icon" />
+                  <span className="text-clB0">TailwindCSS</span>
+                </div>
+                <div className="flex items-center gap-2 py-2 px-10 border-2 border-primaryBlack">
+                  <img className="w-6" src={axios} alt="Axios icon" />
+                  <span className="text-clB0">Axios</span>
+                </div>
               </div>
             </div>
           ) : (
-            // Leonarda Saad contacts
-            // *TODO - Discover how to create a alt to the button
-            // *TODO - Melhorar o visual disso
             <div className="flex flex-col gap-10">
               <p>{t("creator-description")}</p>
 
