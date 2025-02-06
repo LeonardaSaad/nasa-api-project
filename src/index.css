@@ -1,10 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@plugin 'daisyui';
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap")
+layer(utilities);
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap")
+layer(utilities);
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap")
+layer(utilities);
+
+@theme {
+  /* --color-*: initial; */
+  --color-primary: var(--cl-primary);
+  --color-primary-darker: var(--cl-primary-darker);
+  --color-primary-darkest: var(--cl-primary-darkest);
+  --color-base: var(--cl-base);
+  --color-gray-dark: var(--cl-gray-dark);
+  --color-gray-light: var(--cl-gray-light);
+  --color-primary-black: var(--cl-primary-b);
+  --color-gray-lightest: var(--cl-gray-lightest);
+  --color-gray-darkest: var(--cl-gray-darkest);
+  --color-gray: var(--cl-gray);
+  --color-cl-b0: rgb(0, 0, 0);
+  --color-cl-w0: var(--w0);
+
+  --font-*: initial;
+  --font-inter: "Inter", sans-serif;
+  --font-public: "Public Sans";
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  * {
+    margin: revert;
+    padding: revert;
+  }
+}
 
 @layer base {
   :root {
@@ -30,9 +76,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-
-  background: #fff;
+  color-scheme: light dark; 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -50,6 +94,7 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #fff;
 }
 
 h1 {
@@ -71,6 +116,7 @@ button {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: bold;
+  margin: 0;
 }
 
 h4 {
@@ -83,11 +129,15 @@ p {
   font-style: normal;
   font-size: 1rem;
   text-align: justify;
+  margin: 0;
 }
 
 span {
   font-size: 1rem;
-  color: var(--w0);
+}
+
+.span-title-size {
+  font-size: 2.5rem;
 }
 
 a {
@@ -101,10 +151,17 @@ a {
   display: flex;
   align-items: center;
   display: inline-flex;
+  border: 2px solid transparent;
 }
 
-a:hover {
+.a-hover:hover {
   border-bottom: dashed 1px #fff;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-logo-name {

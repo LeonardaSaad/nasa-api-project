@@ -11,16 +11,16 @@ const DailySpaceView = () => {
   const { data, error, loading } = useFetchAPI(url);
 
   return (
-    <div className="h-full">
+    <div className="h-full flex flex-col">
       <Header />
       <div className="flex-1 component-margin flex flex-col gap-16">
-        <h2 className="text-clB0">Daily Space View</h2>
+        <h2 className="text-cl-b0">Daily Space View</h2>
         {loading ? (
           <div>Loading...</div>
         ) : error ? (
           <div>Error: {error.message}</div>
         ) : (
-          <div className="text-clB0 flex flex-col gap-8">
+          <div className="text-cl-b0 flex flex-col gap-8">
             {/* Day image by API. */}
             <img src={data.url} alt={data.title} />
             {/* Image description */}

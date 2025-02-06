@@ -26,16 +26,16 @@ const Header = () => {
 
   return (
     <div className="w-screen">
-      <div className="bg-clB0 flex items-center gap-5 component-padding justify-between z-20 relative">
+      <div className="bg-cl-b0 flex justify-between component-padding z-20 relative">
         {/* ANCHOR Mobile navigation menu */}
-        <div className="transition-all transform md:hidden">
+        <div className="flex items-center justify-center min-w-[30px] cursor-pointer transition-all transform md:hidden ">
           {!handleMenu ? (
             // When closed
             <img
               onClick={() => setHandleMenu(!handleMenu)}
               src={menu}
               alt={t("icon_navigation.alt_text")}
-              className={`w-6 box-content transition-opacity duration-300 transform md:hidden ${
+              className={`w-6 transition-opacity duration-300 transform md:hidden ${
                 handleMenu ? "opacity-0 scale-90" : "opacity-100 scale-100"
               }`}
             />
@@ -45,7 +45,7 @@ const Header = () => {
               onClick={() => setHandleMenu(!handleMenu)}
               src={cross}
               alt={t("icon_navigation.alt_text")}
-              className={`size-6 box-content transition-all duration-300 transform md:hidden ${
+              className={`size-5 transition-all duration-300 transform md:hidden ${
                 !handleMenu ? "opacity-0 scale-90" : "opacity-100 scale-100"
               }`}
             />
@@ -53,7 +53,7 @@ const Header = () => {
         </div>
 
         {/* ANCHOR Expanded navigation menu */}
-        <div className="transition-all transform hidden md:block">
+        <div className="cursor-pointer transition-all transform hidden md:block">
           {!handleMenu ? (
             // When closed
             <Button
@@ -79,14 +79,17 @@ const Header = () => {
         </div>
 
         {/* ANCHOR Nasa logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <a href="/nasa-api-project/" className="hover:border-0">
-            <img src={Logo} alt={t("logo.alt_text")} className="size-11" />
-          </a>
-        </div>
+
+        <a href="/nasa-api-project/" className="!h-11 !w-auto !inline-block">
+          <img
+            src={Logo}
+            alt={t("logo.alt_text")}
+            className="!w-auto !h-full !object-contain"
+          />
+        </a>
 
         {/* ANCHOR Button to change language */}
-        <div>
+        <div className="flex items-center">
           {lang == "pt" ? (
             <Button
               type="no-border"
@@ -112,12 +115,16 @@ const Header = () => {
         }`}
       >
         <nav
-          className={`flex flex-col gap-4 py-2 px-4 bg-clB0 component-padding items-start`}
+          className={`flex flex-col gap-4 py-2 px-4 bg-cl-b0 component-padding items-start`}
         >
           <NavLink
             to="/"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
+              isPending
+                ? "pending a-hover"
+                : isActive
+                ? "active a-hover"
+                : "a-hover"
             }
           >
             {t("navigation.home")}
@@ -125,7 +132,11 @@ const Header = () => {
           <NavLink
             to="/daily-space-view"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
+              isPending
+                ? "pending a-hover"
+                : isActive
+                ? "active a-hover"
+                : "a-hover"
             }
           >
             {t("navigation.daily_space_view")}
@@ -133,7 +144,11 @@ const Header = () => {
           <NavLink
             to="/space-on-your-day"
             className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
+              isPending
+                ? "pending a-hover"
+                : isActive
+                ? "active a-hover"
+                : "a-hover"
             }
           >
             {t("navigation.space_on_your_day")}

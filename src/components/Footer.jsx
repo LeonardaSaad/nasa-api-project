@@ -5,8 +5,8 @@ const Footer = () => {
   const { t } = useTranslation("footer");
 
   return (
-    <div className="bg-clB0 w-screen component-padding-footer flex flex-col items-center gap-7 justify-between md:gap-10 lg:flex-row lg:gap-20">
-      {/* *SECTION - Logo and nav */}
+    <div className="bg-cl-b0 w-screen component-padding-footer flex flex-col items-center gap-7 justify-between md:gap-10 lg:flex-row lg:gap-20">
+      
       <div className="flex flex-wrap gap-6 items-center justify-between lg:flex-nowrap lg:justify-normal">
         {/* ANCHOR Braille logo with name initials. */}
         <div className="flex items-center justify-center max-w-32 ">
@@ -17,13 +17,13 @@ const Footer = () => {
         {/* Navigation bar with the website pages */}
         <div className="flex flex-col gap-2 text-nowrap">
           <a href="/nasa-api-project/">
-            <span className="text-sm">{t("navigation.home")}</span>
+            <span className="!text-sm">{t("navigation.home")}</span>
           </a>
           <a href="/nasa-api-project/daily-space-view">
-            <span className="text-sm">{t("navigation.daily_space_view")}</span>
+            <span className="!text-sm">{t("navigation.daily_space_view")}</span>
           </a>
           <a href="/nasa-api-project/space-on-your-day">
-            <span className="text-sm">{t("navigation.space_on_your_day")}</span>
+            <span className="!text-sm">{t("navigation.space_on_your_day")}</span>
           </a>
         </div>
       </div>
@@ -38,7 +38,7 @@ const Footer = () => {
             <a
               href="https://github.com/LeonardaSaad/nasa-api-project"
               target="_blank"
-              className="bg-grayDark min-h-2.5 min-w-2.5 rounded-full p-1"
+              className="bg-gray-dark !min-h-2.5 !min-w-2.5 rounded-full !p-1 flex justify-center items-center "
             >
               <svg
                 className="size-6"
@@ -56,7 +56,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/leonarda-saad/"
               target="_blank"
-              className="bg-grayDark min-h-2.5 min-w-2.5 rounded-full p-1"
+              className="bg-gray-dark !min-h-2.5 !min-w-2.5 rounded-full !p-1 flex justify-center items-center"
             >
               <svg
                 className="size-6"
@@ -74,7 +74,7 @@ const Footer = () => {
             <a
               href="mailto:saad.leonarda@gmail.com"
               target="_blank"
-              className="bg-grayDark min-h-2.5 min-w-2.5 rounded-full p-1 flex justify-center items-center"
+              className="bg-gray-dark !min-h-2.5 !min-w-2.5 rounded-full !p-1 flex justify-center items-center"
             >
               <svg
                 className="size-6"
@@ -91,8 +91,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className="font-inter text-sm">
-          by <span className="font-bold text-sm">LEONARDA SAAD</span>
+        <p className="font-inter !text-sm">
+          by <span className="font-bold !text-sm">LEONARDA SAAD</span>
         </p>
       </div>
     </div>

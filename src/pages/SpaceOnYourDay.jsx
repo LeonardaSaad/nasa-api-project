@@ -1,36 +1,43 @@
+/* eslint-disable react/no-unknown-property */
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const SpaceOnYourDay = () => {
-  const [dateValue, setDateValue] = useState();
+  // const [selectedDate, setSelectedDate] = useState("Pick a date");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(dateValue);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(selectedDate);
+  // };
 
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Header />
+
       <div className="flex-1 component-margin flex flex-col gap-16">
-        <h2 className="text-clB0">Space on Your Day</h2>
-        {/* Form to get the date */}
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <label htmlFor="form-date" className="text-clB0 text-lg ">
-            Choose the data
-          </label>
+        <h2 className="text-cl-b0">Space on Your Day</h2>
+
+        <div className="relative max-w-sm">
+          <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+            <svg
+              className="w-4 h-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+            </svg>
+          </div>
           <input
-            type="date"
-            className="w-full min-h-10 px-4 text-lg text-clB0 bg-clW0 border-2 rounded-md"
-            id="form-date"
-            name="form-date"
-            onChange={(e) => setDateValue(e)}
+            datepicker="true"
+            id="default-datepicker"
+            type="text"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Select date"
           />
-          <button type="submit" className="btn-black">
-            Search
-          </button>
-        </form>
+        </div>
       </div>
       <Footer />
     </div>
