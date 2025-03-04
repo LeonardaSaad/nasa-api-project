@@ -19,24 +19,30 @@ This project aims to put into practice and improve programming knowledge.
 To access the project, go to this [website](??????). There you will have all the important project information and all the features.
 
 ## Features
-| Features          | Description                                | Link |
-| ----------------- | ------------------------------------------ | ---- |
-| Daily Space View  | Each day a different image of the universe | ??   |
-| Space on Your Day | Image of the selected data                 | ??   |
+
+| Status | Features          | Description                                | Link                                                                            |
+| :------: | ----------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
+| ✅ | Daily Space View  | Each day a different image of the universe | [Go to Page](https://leonardasaad.github.io/nasa-api-project/daily-space-view)  |
+| ⚠️    | Space on Your Day | Image of the selected data                 | [Go to page](https://leonardasaad.github.io/nasa-api-project/space-on-your-day) |
 
 ## Credits & Team
-#### *💻 Programmer*
-- *Leonarda Saad: [GitHub](https://github.com/LeonardaSaad/) **/** [Portfolio](https://leonardasaad.github.io) **/** [LinkedIn](https://www.linkedin.com/in/leonarda-saad/)*
-#### *🎨 Designers*
-- *Leonarda Saad: [GitHub](https://github.com/LeonardaSaad/) **/** [Portfolio](https://leonardasaad.github.io) **/** [LinkedIn](https://www.linkedin.com/in/leonarda-saad/)*
-- *Samira Diniz: [GitHub](https://github.com/samiraDiniz) **/** []() **/** [LinkedIn](https://www.linkedin.com/in/samira-alves/)*
-#### *✏️ UX Writer*
-- *Leonarda Saad: [GitHub](https://github.com/LeonardaSaad/) **/** [Portfolio](https://leonardasaad.github.io) **/** [LinkedIn](https://www.linkedin.com/in/leonarda-saad/)*
-- *Samira Diniz: [GitHub](https://github.com/samiraDiniz) **/** []() **/** [LinkedIn](https://www.linkedin.com/in/samira-alves/)*
 
+#### _💻 Programmer_
+
+- _Leonarda Saad: [GitHub](https://github.com/LeonardaSaad/) **/** [Portfolio](https://leonardasaad.github.io) **/** [LinkedIn](https://www.linkedin.com/in/leonarda-saad/)_
+
+#### _🎨 Designers_
+
+- _Leonarda Saad: [GitHub](https://github.com/LeonardaSaad/) **/** [Portfolio](https://leonardasaad.github.io) **/** [LinkedIn](https://www.linkedin.com/in/leonarda-saad/)_
+- _Samira Diniz: [GitHub](https://github.com/samiraDiniz) **/** []() **/** [LinkedIn](https://www.linkedin.com/in/samira-alves/)_
+
+#### _✏️ UX Writer_
+
+- _Leonarda Saad: [GitHub](https://github.com/LeonardaSaad/) **/** [Portfolio](https://leonardasaad.github.io) **/** [LinkedIn](https://www.linkedin.com/in/leonarda-saad/)_
+- _Samira Diniz: [GitHub](https://github.com/samiraDiniz) **/** []() **/** [LinkedIn](https://www.linkedin.com/in/samira-alves/)_
 
 ## Contributing
- 
+
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature-name`.
 3. Make your changes.
