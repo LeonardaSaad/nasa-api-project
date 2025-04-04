@@ -25,18 +25,18 @@ const Header = () => {
   const [handleMenu, setHandleMenu] = useState(false);
 
   return (
-    <div className="w-screen">
-      <div className="bg-cl-b0 flex justify-between component-padding z-20 relative">
+    <div className="w-full">
+      <div className="bg-cl-b0 component-padding relative z-20 flex justify-between">
         {/* ANCHOR Mobile navigation menu */}
-        <div className="flex items-center justify-center min-w-[30px] cursor-pointer transition-all transform md:hidden ">
+        <div className="flex min-w-[30px] transform cursor-pointer items-center justify-center transition-all md:hidden">
           {!handleMenu ? (
             // When closed
             <img
               onClick={() => setHandleMenu(!handleMenu)}
               src={menu}
               alt={t("icon_navigation.alt_text")}
-              className={`w-6 transition-opacity duration-300 transform md:hidden ${
-                handleMenu ? "opacity-0 scale-90" : "opacity-100 scale-100"
+              className={`w-6 transform transition-opacity duration-300 md:hidden ${
+                handleMenu ? "scale-90 opacity-0" : "scale-100 opacity-100"
               }`}
             />
           ) : (
@@ -45,15 +45,15 @@ const Header = () => {
               onClick={() => setHandleMenu(!handleMenu)}
               src={cross}
               alt={t("icon_navigation.alt_text")}
-              className={`size-5 transition-all duration-300 transform md:hidden ${
-                !handleMenu ? "opacity-0 scale-90" : "opacity-100 scale-100"
+              className={`size-5 transform transition-all duration-300 md:hidden ${
+                !handleMenu ? "scale-90 opacity-0" : "scale-100 opacity-100"
               }`}
             />
           )}
         </div>
 
         {/* ANCHOR Expanded navigation menu */}
-        <div className="cursor-pointer transition-all transform hidden md:block">
+        <div className="hidden transform cursor-pointer transition-all md:flex md:justify-center">
           {!handleMenu ? (
             // When closed
             <Button
@@ -79,12 +79,11 @@ const Header = () => {
         </div>
 
         {/* ANCHOR Nasa logo */}
-
-        <a href="/nasa-api-project/" className="!h-11 !w-auto !inline-block">
+        <a href="/nasa-api-project/" className="!inline-block !h-11 !w-auto">
           <img
             src={Logo}
             alt={t("logo.alt_text")}
-            className="!w-auto !h-full !object-contain"
+            className="!h-full !w-auto !object-contain"
           />
         </a>
 
@@ -110,12 +109,12 @@ const Header = () => {
 
       {/* ANCHOR Nav menu */}
       <div
-        className={`absolute z-10 mobile-nav w-screen transition-all duration-300 transform ${
-          handleMenu ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+        className={`mobile-nav absolute z-10 w-screen transform transition-all duration-300 ${
+          handleMenu ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
         }`}
       >
         <nav
-          className={`flex flex-col gap-4 py-2 px-4 bg-cl-b0 component-padding items-start`}
+          className={`bg-cl-b0 component-padding flex flex-col items-start gap-4 px-4 py-2`}
         >
           <NavLink
             to="/"
@@ -123,8 +122,8 @@ const Header = () => {
               isPending
                 ? "pending a-hover"
                 : isActive
-                ? "active a-hover"
-                : "a-hover"
+                  ? "active a-hover"
+                  : "a-hover"
             }
           >
             {t("navigation.home")}
@@ -135,8 +134,8 @@ const Header = () => {
               isPending
                 ? "pending a-hover"
                 : isActive
-                ? "active a-hover"
-                : "a-hover"
+                  ? "active a-hover"
+                  : "a-hover"
             }
           >
             {t("navigation.daily_space_view")}
@@ -147,8 +146,8 @@ const Header = () => {
               isPending
                 ? "pending a-hover"
                 : isActive
-                ? "active a-hover"
-                : "a-hover"
+                  ? "active a-hover"
+                  : "a-hover"
             }
           >
             {t("navigation.space_on_your_day")}

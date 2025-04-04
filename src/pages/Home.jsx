@@ -22,13 +22,13 @@ function Home() {
   const [topic, setTopic] = useState("about");
 
   return (
-    <div className="flex start flex-col w-screen h-full">
+    <div className="start flex h-full w-screen flex-col">
       <Header />
       <Banner />
-      <div className="flex-1 text-cl-b0 component-margin z-0 flex flex-col gap-[4.375em]">
+      <div className="text-cl-b0 component-margin z-0 flex flex-1 flex-col gap-[4.375em]">
         {/* Topics */}
         <div>
-          <ul className="flex !pb-3 gap-4 sm:gap-6">
+          <ul className="flex gap-4 !pb-3 sm:gap-6">
             <li
               className={`topic-li ${
                 topic === "about" ? "topic-li-active" : ""
@@ -54,7 +54,7 @@ function Home() {
               {t("creator")}
             </li>
           </ul>
-          <div className="h-px bg-gray-lightest"></div>
+          <div className="bg-gray-lightest h-px"></div>
         </div>
         {/* Body */}
         <div className="flex flex-col gap-2.5">
@@ -64,15 +64,15 @@ function Home() {
               {topic == "about"
                 ? t("about")
                 : topic == "technologies"
-                ? t("technologies")
-                : t("creator")}
+                  ? t("technologies")
+                  : t("creator")}
             </h2>
             <p className="font-bold">
               {topic == "about"
                 ? t("about-subtitle")
                 : topic == "technologies"
-                ? t("technologies-subtitle")
-                : t("creator-subtitle")}
+                  ? t("technologies-subtitle")
+                  : t("creator-subtitle")}
             </p>
           </div>
           {/* Content */}
@@ -86,7 +86,7 @@ function Home() {
               <br />
               <div className="flex flex-col items-start">
                 <a
-                  className="flex gap-2.5 min-h-10 hover:border-0"
+                  className="flex min-h-10 gap-2.5 hover:border-0"
                   href="https://github.com/LeonardaSaad/project-nasa-api"
                   target="_blank"
                 >
@@ -98,7 +98,7 @@ function Home() {
                   />
                 </a>
                 <a
-                  className="flex- gap-2.5 min-h-10 hover:border-0"
+                  className="flex- min-h-10 gap-2.5 hover:border-0"
                   href="https://www.figma.com/design/ufIAA3A3F3ApYpAd0BFq73/Nasa-Api-Project?node-id=1-2&t=qoC30mC6noPx77wH-1"
                   target="_blank"
                 >
@@ -114,20 +114,20 @@ function Home() {
           ) : topic == "technologies" ? (
             <div className="flex flex-col gap-10">
               <p>{t("technologies-description")}</p>
-              <div className="flex gap-4 flex-wrap font-inter">
-                <div className="flex items-center gap-2 !py-2 !px-10 !border-2 border-primaryBlack">
+              <div className="font-inter flex flex-wrap gap-4">
+                <div className="border-primaryBlack flex items-center gap-2 !border-2 !px-10 !py-2">
                   <img className="w-6" src={react} alt="React icon" />
                   <span className="text-cl-b0">React</span>
                 </div>
-                <div className="flex items-center gap-2 !py-2 !px-10 !border-2 border-primaryBlack">
+                <div className="border-primaryBlack flex items-center gap-2 !border-2 !px-10 !py-2">
                   <img className="w-6" src={vite} alt="Vite icon" />
                   <span className="text-cl-b0">Vite</span>
                 </div>
-                <div className="flex items-center gap-2 !py-2 !px-10 !border-2 border-primaryBlack">
+                <div className="border-primaryBlack flex items-center gap-2 !border-2 !px-10 !py-2">
                   <img className="w-6" src={tailwind} alt="TailwindCSS icon" />
                   <span className="text-cl-b0">TailwindCSS</span>
                 </div>
-                <div className="flex items-center gap-2 !py-2 !px-10 !border-2 border-primaryBlack">
+                <div className="border-primaryBlack flex items-center gap-2 !border-2 !px-10 !py-2">
                   <img className="w-6" src={axios} alt="Axios icon" />
                   <span className="text-cl-b0">Axios</span>
                 </div>
@@ -137,7 +137,7 @@ function Home() {
             <div className="flex flex-col gap-10">
               <p>{t("creator-description")}</p>
 
-              <div className="flex gap-10 flex-wrap">
+              <div className="flex flex-wrap gap-10">
                 <a
                   className="flex items-center gap-2.5 hover:border-0"
                   href="https://github.com/LeonardaSaad"

@@ -31,9 +31,8 @@ const AppRouter = () => {
     ],
     {
       basename: "/nasa-api-project",
-    }
+    },
   );
-  
 
   return <RouterProvider router={router} />;
 };

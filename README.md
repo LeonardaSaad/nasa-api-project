@@ -21,9 +21,9 @@ To access the project, go to this [website](??????). There you will have all the
 ## Features
 
 | Status | Features          | Description                                | Link                                                                            |
-| :------: | ----------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
-| ✅ | Daily Space View  | Each day a different image of the universe | [Go to Page](https://leonardasaad.github.io/nasa-api-project/daily-space-view)  |
-| ⚠️    | Space on Your Day | Image of the selected data                 | [Go to page](https://leonardasaad.github.io/nasa-api-project/space-on-your-day) |
+| :----: | ----------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
+|   ✅   | Daily Space View  | Each day a different image of the universe | [Go to Page](https://leonardasaad.github.io/nasa-api-project/daily-space-view)  |
+|   ⚠️   | Space on Your Day | Image of the selected data                 | [Go to page](https://leonardasaad.github.io/nasa-api-project/space-on-your-day) |
 
 ## Credits & Team
 

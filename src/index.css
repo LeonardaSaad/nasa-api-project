@@ -1,17 +1,9 @@
 @import "tailwindcss";
+@plugin 'daisyui';
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
-@plugin 'daisyui';
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap")
-layer(utilities);
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap")
-layer(utilities);
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap")
-layer(utilities);
 
 @theme {
-  /* --color-*: initial; */
   --color-primary: var(--cl-primary);
   --color-primary-darker: var(--cl-primary-darker);
   --color-primary-darkest: var(--cl-primary-darkest);
@@ -30,14 +22,6 @@ layer(utilities);
   --font-public: "Public Sans";
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -76,7 +60,7 @@ layer(utilities);
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark; 
+  color-scheme: light dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -157,7 +141,6 @@ a {
 .a-hover:hover {
   border-bottom: dashed 1px #fff;
 }
-
 
 ul {
   margin: 0;

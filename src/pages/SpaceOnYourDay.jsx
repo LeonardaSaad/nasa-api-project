@@ -12,16 +12,16 @@ const SpaceOnYourDay = () => {
   // };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="flex h-screen flex-col">
       <Header />
 
-      <div className="flex-1 component-margin flex flex-col gap-16">
+      <div className="component-margin flex flex-1 flex-col gap-16">
         <h2 className="text-cl-b0">Space on Your Day</h2>
 
         <div className="relative max-w-sm">
-          <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
             <svg
-              className="w-4 h-4 text-gray-500 dark:text-gray-400"
+              className="h-4 w-4 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -34,7 +34,7 @@ const SpaceOnYourDay = () => {
             datepicker="true"
             id="default-datepicker"
             type="text"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 ps-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Select date"
           />
         </div>

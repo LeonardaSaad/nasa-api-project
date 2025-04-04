@@ -8,10 +8,8 @@ import AppRouter from "./AppRouter.jsx";
 
 import "./index.css";
 
-
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AppRouter />
-  </StrictMode>
+  </StrictMode>,
 );

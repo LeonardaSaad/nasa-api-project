@@ -9,7 +9,7 @@ const Button = ({
 }) => {
   return (
     <div
-      className={`text-lg font-bold min-w-10 min-h-10 flex justify-center items-center gap-2 ${
+      className={`flex min-h-10 min-w-10 items-center justify-center gap-2 text-lg font-bold ${
         type === "no-border" ? "text-cl-w0 cursor-pointer" : ""
       }`}
       onClick={onClick}

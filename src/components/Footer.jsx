@@ -5,11 +5,10 @@ const Footer = () => {
   const { t } = useTranslation("footer");
 
   return (
-    <div className="bg-cl-b0 w-screen component-padding-footer flex flex-col items-center gap-7 justify-between md:gap-10 lg:flex-row lg:gap-20">
-      
-      <div className="flex flex-wrap gap-6 items-center justify-between lg:flex-nowrap lg:justify-normal">
+    <div className="bg-cl-b0 component-padding-footer flex w-screen flex-col items-center justify-between gap-7 md:gap-10 lg:flex-row lg:gap-20">
+      <div className="flex flex-wrap items-center justify-between gap-6 lg:flex-nowrap lg:justify-normal">
         {/* ANCHOR Braille logo with name initials. */}
-        <div className="flex items-center justify-center max-w-32 ">
+        <div className="flex max-w-32 items-center justify-center">
           <img src={logoBraille} alt={t("logo.alt_img")} className="min-w-20" />
           <p className="footer-logo-name absolute">LS</p>
         </div>
@@ -23,22 +22,24 @@ const Footer = () => {
             <span className="!text-sm">{t("navigation.daily_space_view")}</span>
           </a>
           <a href="/nasa-api-project/space-on-your-day">
-            <span className="!text-sm">{t("navigation.space_on_your_day")}</span>
+            <span className="!text-sm">
+              {t("navigation.space_on_your_day")}
+            </span>
           </a>
         </div>
       </div>
 
       {/* ANCHOR  Contacts and Credits*/}
-      <div className="flex flex-col items-center justify-between w-full gap-5 md:flex-row lg:flex-col lg:items-start lg:w-fit">
+      <div className="flex w-full flex-col items-center justify-between gap-5 md:flex-row lg:w-fit lg:flex-col lg:items-start">
         {/* NOTE: This code are outdated with the design */}
         {/* TODO: redo all the section*/}
-        <div className="flex gap-3 items-center">
+        <div className="flex items-center gap-3">
           <h4 className="text-gray font-bold">{t("contacts")}</h4>
           <div className="flex gap-2">
             <a
               href="https://github.com/LeonardaSaad/nasa-api-project"
               target="_blank"
-              className="bg-gray-dark !min-h-2.5 !min-w-2.5 rounded-full !p-1 flex justify-center items-center "
+              className="bg-gray-dark flex !min-h-2.5 !min-w-2.5 items-center justify-center rounded-full !p-1"
             >
               <svg
                 className="size-6"
@@ -56,7 +57,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/leonarda-saad/"
               target="_blank"
-              className="bg-gray-dark !min-h-2.5 !min-w-2.5 rounded-full !p-1 flex justify-center items-center"
+              className="bg-gray-dark flex !min-h-2.5 !min-w-2.5 items-center justify-center rounded-full !p-1"
             >
               <svg
                 className="size-6"
@@ -74,7 +75,7 @@ const Footer = () => {
             <a
               href="mailto:saad.leonarda@gmail.com"
               target="_blank"
-              className="bg-gray-dark !min-h-2.5 !min-w-2.5 rounded-full !p-1 flex justify-center items-center"
+              className="bg-gray-dark flex !min-h-2.5 !min-w-2.5 items-center justify-center rounded-full !p-1"
             >
               <svg
                 className="size-6"
@@ -92,7 +93,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="font-inter !text-sm">
-          by <span className="font-bold !text-sm">LEONARDA SAAD</span>
+          by <span className="!text-sm font-bold">LEONARDA SAAD</span>
         </p>
       </div>
     </div>
