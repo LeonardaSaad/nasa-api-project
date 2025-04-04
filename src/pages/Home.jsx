@@ -22,7 +22,7 @@ function Home() {
   const [topic, setTopic] = useState("about");
 
   return (
-    <div className="start flex h-full w-screen flex-col">
+    <div className="start flex min-h-screen w-full flex-col">
       <Header />
       <Banner />
       <div className="text-cl-b0 component-margin z-0 flex flex-1 flex-col gap-[4.375em]">
@@ -194,6 +194,7 @@ function Home() {
           )}
         </div>
       </div>
+
       <Footer />
     </div>
   );

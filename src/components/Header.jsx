@@ -28,7 +28,7 @@ const Header = () => {
     <div className="w-full">
       <div className="bg-cl-b0 component-padding relative z-20 flex justify-between">
         {/* ANCHOR Mobile navigation menu */}
-        <div className="flex min-w-[30px] transform cursor-pointer items-center justify-center transition-all md:hidden">
+        <div className="flex w-8 cursor-pointer items-center justify-center md:hidden">
           {!handleMenu ? (
             // When closed
             <img
@@ -83,7 +83,7 @@ const Header = () => {
           <img
             src={Logo}
             alt={t("logo.alt_text")}
-            className="!h-full !w-auto !object-contain"
+            className="h-11 w-auto max-w-full object-contain"
           />
         </a>
 
@@ -110,7 +110,9 @@ const Header = () => {
       {/* ANCHOR Nav menu */}
       <div
         className={`mobile-nav absolute z-10 w-screen transform transition-all duration-300 ${
-          handleMenu ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+          handleMenu
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-4 opacity-0"
         }`}
       >
         <nav
