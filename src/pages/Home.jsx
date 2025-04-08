@@ -22,10 +22,10 @@ function Home() {
   const [topic, setTopic] = useState("about");
 
   return (
-    <div className="start flex min-h-screen w-full flex-col">
+    <div className=" flex min-h-screen w-full flex-col">
       <Header />
       <Banner />
-      <div className="text-cl-b0 component-margin z-0 flex flex-1 flex-col gap-[4.375em]">
+      <div className="text-cl-b0 body-padding  z-0 flex flex-1 flex-col gap-[4.375em]">
         {/* Topics */}
         <div>
           <ul className="flex gap-4 !pb-3 sm:gap-6">

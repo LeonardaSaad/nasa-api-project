@@ -15,7 +15,7 @@ const SpaceOnYourDay = () => {
     <div className="flex h-screen flex-col">
       <Header />
 
-      <div className="component-margin flex flex-1 flex-col gap-16">
+      <div className="body-padding flex flex-1 flex-col gap-16">
         <h2 className="text-cl-b0">Space on Your Day</h2>
 
         <div className="relative max-w-sm">

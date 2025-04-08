@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <div className="w-full">
-      <div className="bg-cl-b0 component-padding relative z-20 flex justify-between">
+      <div className="bg-cl-b0 header-padding relative z-20 flex justify-between">
         {/* ANCHOR Mobile navigation menu */}
         <div className="flex w-8 cursor-pointer items-center justify-center md:hidden">
           {!handleMenu ? (
@@ -109,14 +109,14 @@ const Header = () => {
 
       {/* ANCHOR Nav menu */}
       <div
-        className={`mobile-nav absolute z-10 w-screen transform transition-all duration-300 ${
+        className={`mobile-nav absolute z-10 w-full transform transition-all duration-300 ${
           handleMenu
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-4 opacity-0"
         }`}
       >
         <nav
-          className={`bg-cl-b0 component-padding flex flex-col items-start gap-4 px-4 py-2`}
+          className={`bg-cl-b0 header-padding flex flex-col items-start gap-4 px-4 py-2`}
         >
           <NavLink
             to="/"

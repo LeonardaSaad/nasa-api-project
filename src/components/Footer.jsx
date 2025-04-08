@@ -5,24 +5,28 @@ const Footer = () => {
   const { t } = useTranslation("footer");
 
   return (
-    <div className="bg-cl-b0 component-padding-footer flex w-screen flex-col items-center justify-between gap-7 md:gap-10 lg:flex-row lg:gap-20">
-      <div className="flex flex-wrap items-center justify-between gap-6 lg:flex-nowrap lg:justify-normal">
+    <div className="bg-cl-b0 footer-padding flex w-full flex-col items-center justify-between gap-10 md:gap-10 lg:flex-row lg:gap-20">
+
+      <div className="flex items-center justify-between gap-6 w-full lg:flex-nowrap lg:justify-normal">
+
         {/* ANCHOR Braille logo with name initials. */}
-        <div className="flex max-w-32 items-center justify-center">
-          <img src={logoBraille} alt={t("logo.alt_img")} className="min-w-20" />
+        <div className="flex items-center justify-center">
+
+          <img src={logoBraille} alt={t("logo.alt_img")} className="max-w-[150px]" />
           <p className="footer-logo-name absolute">LS</p>
+          
         </div>
 
         {/* Navigation bar with the website pages */}
         <div className="flex flex-col gap-2 text-nowrap">
           <a href="/nasa-api-project/">
-            <span className="!text-sm">{t("navigation.home")}</span>
+            <span className="!text-md !font-light text-gray">{t("navigation.home")}</span>
           </a>
           <a href="/nasa-api-project/daily-space-view">
-            <span className="!text-sm">{t("navigation.daily_space_view")}</span>
+            <span className="!text-md !font-light text-gray">{t("navigation.daily_space_view")}</span>
           </a>
           <a href="/nasa-api-project/space-on-your-day">
-            <span className="!text-sm">
+            <span className="!text-md !font-light text-gray">
               {t("navigation.space_on_your_day")}
             </span>
           </a>
@@ -30,11 +34,10 @@ const Footer = () => {
       </div>
 
       {/* ANCHOR  Contacts and Credits*/}
-      <div className="flex w-full flex-col items-center justify-between gap-5 md:flex-row lg:w-fit lg:flex-col lg:items-start">
-        {/* NOTE: This code are outdated with the design */}
-        {/* TODO: redo all the section*/}
+      <div className="flex flex-col items-center justify-between w-full gap-5 xs:flex-row xs:flex-wrap lg:flex-col lg:justify-end lg:gap-10 xl:flex-row">
+
         <div className="flex items-center gap-3">
-          <h4 className="text-gray font-bold">{t("contacts")}</h4>
+          <p className="text-gray font-bold !text-md">{t("contacts")}</p>
           <div className="flex gap-2">
             <a
               href="https://github.com/LeonardaSaad/nasa-api-project"
@@ -92,8 +95,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className="font-inter !text-sm">
-          by <span className="!text-sm font-bold">LEONARDA SAAD</span>
+
+        <p className="font-inter !text-md text-gray font-light">
+          by <span className="!text-md font-bold">LEONARDA SAAD</span>
         </p>
       </div>
     </div>
