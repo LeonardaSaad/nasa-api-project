@@ -10,7 +10,11 @@ const Button = ({
   return (
     <div
       className={`flex min-h-10 min-w-10 items-center justify-center gap-2 text-lg font-bold ${
-        type === "no-border" ? "text-cl-w0 cursor-pointer" : ""
+        type === "no-border"
+          ? "text-cl-w0 cursor-pointer"
+          : type === "black"
+            ? "text-cl-w0 cursor-pointer bg-black rounded"
+            : ""
       }`}
       onClick={onClick}
     >

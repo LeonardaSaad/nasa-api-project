@@ -4,6 +4,7 @@ import "../index.css";
 
 // Hook
 import useFetchAPI from "../hooks/useFetchAPI";
+import { MediaContent } from "../components/MediaContent";
 
 const DailySpaceView = () => {
   const env = import.meta.env;
@@ -22,40 +23,7 @@ const DailySpaceView = () => {
         ) : error ? (
           <div>Error: {error.message}</div>
         ) : (
-          <div className="text-cl-b0 flex flex-col gap-8 lg:flex-row lg:items-center">
-            {/* Day image by API. */}
-            <img
-              src={data.url}
-              alt={data.title}
-              className="h-fit rounded-md lg:w-[40%]"
-            />
-            {/* Image description */}
-            <div className="flex flex-col gap-8 text-justify lg:justify-center">
-              {/* Image title */}
-              <div className="">
-                <h4 className="text-center !text-lg">{data.title}</h4>
-                <p className="text-font-gray !text-center !text-sm">
-                  {data.copyright} • {data.date}
-                </p>
-              </div>
-              {/* Image explanation */}
-              <p>{data.explanation}</p>
-
-              {/* Archive images link */}
-              <p className="font-bold">
-                Discover the previous images:{" "}
-                <a
-                  href="https://apod.nasa.gov/apod/archivepix.html"
-                  target="_blank"
-                  className="font-black"
-                >
-                  <span className="text-black underline underline-offset-2 hover:opacity-60">
-                    archive
-                  </span>
-                </a>
-              </p>
-            </div>
-          </div>
+          <MediaContent data={data} error={error} loading={loading} />
         )}
       </div>
       <Footer />

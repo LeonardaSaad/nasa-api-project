@@ -1,7 +1,5 @@
 @import "tailwindcss";
 @plugin 'daisyui';
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
 
 @theme {
   --color-primary: var(--cl-primary);
@@ -36,7 +34,9 @@
     margin: revert;
     padding: revert;
   }
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 }
@@ -75,11 +75,17 @@
   width: 100%;
 }
 
-html, body, #root {
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+html,
+body,
+#root {
   width: 100%;
   min-width: 100%;
 }
-
 
 * {
   box-sizing: border-box;
@@ -94,12 +100,11 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: clip; /* ao invés de hidden */
+  overflow-x: clip;
 }
 
 body {
   display: flex;
-  /* min-width: 320px; */
   min-height: 100vh;
   background-color: #fff;
 }
@@ -216,62 +221,6 @@ ul {
   border-bottom: dashed 1px #fff;
 }
 
-.component-padding {
-  padding: 0.5rem 1.5rem;
-
-  @media (min-width: 480px) {
-    padding: 0.5rem 5rem;
-  }
-
-  @media (min-width: 640px) {
-    padding: 0.5rem 8rem;
-  }
-
-  @media (min-width: 768px) {
-    padding: 0.5rem 10rem;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 0.5rem 20rem;
-  }
-
-  @media (min-width: 1280px) {
-    padding: 0.5rem 25rem;
-  }
-
-  @media (min-width: 1536px) {
-    padding: 0.5rem 35rem;
-  }
-}
-
-.component-margin {
-  margin: 5rem 1.5rem;
-
-  @media (min-width: 480px) {
-    margin: 5rem 5rem;
-  }
-
-  @media (min-width: 640px) {
-    margin: 5rem 8rem;
-  }
-
-  @media (min-width: 768px) {
-    margin: 5rem 12rem;
-  }
-
-  @media (min-width: 1024px) {
-    margin: 5rem 20rem;
-  }
-
-  @media (min-width: 1280px) {
-    margin: 5rem 25rem;
-  }
-
-  @media (min-width: 1536px) {
-    margin: 5rem 35rem;
-  }
-}
-
 .mobile-nav {
   top: 56px;
 }
@@ -333,8 +282,6 @@ ul {
   @media (min-width: 1536px) {
     padding: 0.5rem 20vw;
   }
-  
-  
 }
 
 .body-padding {
