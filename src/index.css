@@ -339,3 +339,29 @@ ul {
     padding: 1.5rem 20vw;
   }
 }
+
+.react-datepicker {
+  border-radius: 0.25rem !important;
+  border-color: var(--cl-base) !important;
+}
+
+.react-datepicker__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: #fff !important;
+  border-bottom: var(--color-base) 1px solid !important;
+}
+
+.react-datepicker__navigation
+  .react-datepicker__navigation--years
+  .react-datepicker__navigation--years-previous {
+  color: black;
+  background-color: black;
+  fill: black;
+}
+
+.react-datepicker__day--today {
+  background-color: rgb(208, 224, 252) !important;
+  border-radius: 5px !important;
+}

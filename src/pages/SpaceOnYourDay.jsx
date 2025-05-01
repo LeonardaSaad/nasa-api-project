@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { format } from "date-fns";
 
 import DatePicker from "react-datepicker";
@@ -14,10 +14,16 @@ import useFetchAPI from "../hooks/useFetchAPI";
 import { useTranslation } from "react-i18next";
 import { MediaContent } from "../components/MediaContent";
 
+// Icons
+import arrow from "../img/icon-right_arrow.svg";
+
+import range from "lodash.range";
+import Select from "react-select";
+
 const { VITE_API_URL_APOD, VITE_API_KEY } = import.meta.env;
 
 const SpaceOnYourDay = () => {
-  const { t } = useTranslation("dateFormat");
+  const { t } = useTranslation(["soyd", "dateFormat"]);
 
   const [selectedDate, setSelectedDate] = useState("");
   const [url, setUrl] = useState("");
@@ -51,22 +57,30 @@ const SpaceOnYourDay = () => {
     setSelectedDate(newDate);
   };
 
-  useEffect(() => {
-    console.log(selectedDate);
-  }, [selectedDate]);
+  const getMonth = (date) => date.getMonth();
+  const getYear = (date) => date.getFullYear();
+  const years = range(1995, getYear(new Date()) + 1, 1);
+
+  const monthOptions = t("months", {
+    returnObjects: true,
+    ns: "dateFormat",
+  });
+  const yearOptions = years.map((year) => ({ value: year, label: year }));
 
   return (
     <div className="flex h-full flex-col">
       <Header />
 
       <div className="body-padding flex flex-1 flex-col gap-10 text-black">
-        <h2 className="text-cl-b0">Space on Your Day</h2>
+        <h2 className="text-cl-b0">{t("title", { ns: "soyd" })}</h2>
         <div className="flex flex-col gap-5">
-          <label className="text-black">Pick a date:</label>
+          <label className="text-black">
+            {t("content.label", { ns: "soyd" })}
+          </label>
           <div className="flex flex-col">
             <DatePicker
               className="font-inter mb-2.5 w-full rounded border-1 border-black text-black"
-              placeholderText={t("date")}
+              placeholderText={t("date", { ns: "dateFormat" })}
               dateFormat="dd/MM/yyyy"
               selected={selectedDate}
               onChangeRaw={(event) => {
@@ -74,10 +88,92 @@ const SpaceOnYourDay = () => {
               }}
               onChange={(date) => setSelectedDate(date)}
               maxDate={new Date()}
-              showIcon // *NOTE - I will use this?
-              showYearDropdown
-              showMonthDropdown
+              minDate={new Date(1995, 6, 16)}
+              renderCustomHeader={({
+                date,
+                changeYear,
+                changeMonth,
+                decreaseMonth,
+                increaseMonth,
+                prevMonthButtonDisabled,
+                nextMonthButtonDisabled,
+              }) => (
+                <div
+                  className="m-2.5 flex flex-col justify-center gap-2"
+                  style={{
+                    margin: 10,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div className="flex flex-row justify-between">
+                    <button
+                      onClick={decreaseMonth}
+                      disabled={prevMonthButtonDisabled}
+                      className="font-bold opacity-40"
+                    >
+                      <img src={arrow} className="rotate-y-180" />
+                    </button>
+
+                    <p className="font-bold">
+                      {
+                        (
+                          t("months", {
+                            returnObjects: true,
+                            ns: "dateFormat",
+                          }) || []
+                        ).find((o) => o.value === getMonth(date))?.label
+                      }{" "}
+                      {date.getFullYear()}
+                    </p>
+
+                    <button
+                      onClick={increaseMonth}
+                      disabled={nextMonthButtonDisabled}
+                      className="font-bold opacity-40"
+                    >
+                      <img src={arrow} />
+                    </button>
+                  </div>
+
+                  <div className="flex flex-row justify-around">
+                    <Select
+                      options={yearOptions}
+                      defaultValue={yearOptions.find(
+                        (o) => o.value === getYear(date),
+                      )}
+                      onChange={(selected) => changeYear(selected.value)}
+                      maxMenuHeight={160}
+                      styles={{
+                        control: (base) => ({
+                          ...base,
+                          minHeight: 30,
+                        }),
+                      }}
+                    />
+
+                    <Select
+                      options={monthOptions}
+                      defaultValue={t("months", {
+                        returnObjects: true,
+                        ns: "dateFormat",
+                      }).find((o) => o.value === getMonth(date))}
+                      onChange={(selected) => {
+                        changeMonth(selected.value);
+                      }}
+                      styles={{
+                        control: (baseStyles) => ({
+                          ...baseStyles,
+                          width: 100,
+                        }),
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
             />
+
             <Button
               type="black"
               content="Search"
