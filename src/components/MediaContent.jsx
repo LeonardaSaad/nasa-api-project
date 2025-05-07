@@ -26,10 +26,10 @@ export const MediaContent = ({ data, error, loading }) => {
         <img
           src={data.url}
           alt={data.title}
-          className="animation-zoomIn z-40 h-fit w-full rounded-md"
+          className="animation-zoomIn z-40 max-w-full max-h-full object-contain rounded-md"
         />
         <div
-          className="absolute top-0 z-30 h-screen w-screen cursor-zoom-out bg-black opacity-80"
+          className="absolute top-0 z-30 h-screen w-screen cursor-zoom-out bg-black opacity-85"
           onClick={() => setShowImgZoom(false)}
         ></div>
       </div>
