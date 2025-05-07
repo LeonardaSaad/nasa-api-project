@@ -32,7 +32,7 @@ const Header = () => {
           {!handleMenu ? (
             // When closed
             <img
-              onClick={() => setHandleMenu(!handleMenu)}
+              onClick={() => setHandleMenu((prev) => !prev)}
               src={menu}
               alt={t("icon_navigation.alt_text")}
               className={`w-6 transform transition-opacity duration-300 md:hidden ${
@@ -42,7 +42,7 @@ const Header = () => {
           ) : (
             // When opened
             <img
-              onClick={() => setHandleMenu(!handleMenu)}
+              onClick={() => setHandleMenu((prev) => !prev)}
               src={cross}
               alt={t("icon_navigation.alt_text")}
               className={`size-5 transform transition-all duration-300 md:hidden ${
@@ -63,7 +63,7 @@ const Header = () => {
               imgAlt=""
               imgStyle="rotate-180"
               content="Explore"
-              onClick={() => setHandleMenu(!handleMenu)}
+              onClick={() => setHandleMenu((prev) => !prev)}
             />
           ) : (
             // When opened
@@ -73,7 +73,7 @@ const Header = () => {
               img={explore}
               imgAlt=""
               content="Explore"
-              onClick={() => setHandleMenu(!handleMenu)}
+              onClick={() => setHandleMenu((prev) => !prev)}
             />
           )}
         </div>

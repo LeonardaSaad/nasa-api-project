@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-export const MediaHeader = ({ title, copyright, date, body }) => {
+export const MediaTitle = ({ title, copyright, date, body }) => {
   return (
-    <div className={body ? `xl:hidden` : `hidden xl:block`}>
+    <div className={body ? `2xl:hidden` : `hidden 2xl:block`}>
       <h4 className="text-center !text-lg">{title}</h4>
       <p className="text-font-gray !text-center !text-base">
         {copyright} • {date}
@@ -11,7 +11,7 @@ export const MediaHeader = ({ title, copyright, date, body }) => {
   );
 };
 
-MediaHeader.propTypes = {
+MediaTitle.propTypes = {
   title: PropTypes.string,
   copyright: PropTypes.string,
   date: PropTypes.string,

@@ -11,8 +11,6 @@ const DailySpaceView = () => {
   const url = `${env.VITE_API_URL_APOD}?api_key=${env.VITE_API_KEY}`;
   const { data, error, loading } = useFetchAPI(url);
 
-  console.log(data);
-
   return (
     <div className="flex h-full flex-col">
       <Header />
